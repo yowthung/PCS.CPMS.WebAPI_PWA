@@ -1,0 +1,1 @@
+2020-06-29 23:50:25.1306 INFO Information is logged

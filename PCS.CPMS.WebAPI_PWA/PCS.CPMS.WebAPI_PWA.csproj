@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers_\**" />
+    <Compile Remove="Filters\**" />
+    <Compile Remove="Models2\**" />
+    <Content Remove="Controllers_\**" />
+    <Content Remove="Filters\**" />
+    <Content Remove="Models2\**" />
+    <EmbeddedResource Remove="Controllers_\**" />
+    <EmbeddedResource Remove="Filters\**" />
+    <EmbeddedResource Remove="Models2\**" />
+    <None Remove="Controllers_\**" />
+    <None Remove="Filters\**" />
+    <None Remove="Models2\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Abp" Version="5.9.0" />
+    <PackageReference Include="DinkToPdf" Version="1.0.8" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Cors" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="1.6.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PCS.CPMS.BL">
+      <HintPath>..\..\PCS.CPMS.BL\PCS.CPMS.BL\bin\Debug\netcoreapp3.1\PCS.CPMS.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="PCS.CPMS.DAL">
+      <HintPath>..\..\PCS.CPMS.DAL\PCS.CPMS.DAL\bin\Debug\netcoreapp3.1\PCS.CPMS.DAL.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\PCS.CPMS.BL\PCS.CPMS.BL\PCS.CPMS.BL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="wkhtmltox\" />
+  </ItemGroup>
+
+
+</Project>
